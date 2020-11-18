@@ -1,7 +1,7 @@
 # Проект «Большое путешествие» [![Build status][travis-image]][travis-url]
 
-- Студент: [Evgeny Galimov](https://up.htmlacademy.ru/ecmascript/13/user/892167).
-- Наставник: `Дмитрий Гуляев`.
+* Студент: [Evgeny Galimov](https://up.htmlacademy.ru/ecmascript/13/user/892167).
+* Наставник: `Неизвестно`.
 
 ---
 
