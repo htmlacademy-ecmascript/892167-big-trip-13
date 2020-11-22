@@ -168,4 +168,4 @@ export const contentTemplate = () => {
               </form>
             </li>
 </ul>`;
-}
+};
