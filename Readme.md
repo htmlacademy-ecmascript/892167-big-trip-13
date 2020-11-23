@@ -3,7 +3,6 @@
 - Студент: [Evgeny Galimov](https://up.htmlacademy.ru/ecmascript/13/user/892167).
 - Наставник: [Дмитрий Гуляев](https://htmlacademy.ru/profile/dima).
 
-
 ---
 
 _Не удаляйте и не изменяйте папки и файлы:_
