@@ -10,8 +10,14 @@ const generateDuration = () => {
 const generateDescription = () => {
   return `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
 };
-const generateImage = () => {
-  return `http://picsum.photos/248/152?r=${Math.random() * 1000}`;
+
+const generateImage = (length) => {
+  let images = [];
+  for (let i = 0; i < length; i++) {
+    const randomNumber = Math.trunc(Math.random() * 1000);
+    images.push(`http://picsum.photos/248/152?r=${randomNumber}`);
+  }
+  return images;
 };
 const generatePrice = (number) => {
   return Math.floor(Math.random() * number);
@@ -33,7 +39,7 @@ export const generateTripPointData = (length) => {
       destination: generateDestination(),
       description: generateDescription(),
       type: generatePointType(),
-      image: generateImage(),
+      images: generateImage(5),
       price: generatePrice(1000),
       duration: generateDuration(),
       date: generateDate(),

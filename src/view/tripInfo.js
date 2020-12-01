@@ -1,8 +1,16 @@
 export const tripInfoTemplate = (data) => {
-  let places;
-
-  return `<div class="trip-info__main">
+  let totalPrice = 0;
+  Object.keys(data).map((key) => {
+    totalPrice += data[key].price;
+  });
+  return `<section class="trip-main__trip-info  trip-info">
+            <div class="trip-info__main">
               <h1 class="trip-info__title">Amsterdam &mdash; Chamonix &mdash; Geneva</h1>
+
               <p class="trip-info__dates">Mar 18&nbsp;&mdash;&nbsp;20</p>
-            </div>`;
+            </div>
+            <p class="trip-info__cost">
+              Total: &euro;&nbsp;<span class="trip-info__cost-value">${totalPrice}</span>
+            </p>
+          </section>`;
 };
