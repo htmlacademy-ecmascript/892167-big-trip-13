@@ -12,7 +12,7 @@ const generateDescription = () => {
 };
 
 const generateImage = (length) => {
-  let images = [];
+  const images = [];
   for (let i = 0; i < length; i++) {
     const randomNumber = Math.trunc(Math.random() * 1000);
     images.push(`http://picsum.photos/248/152?r=${randomNumber}`);
@@ -32,7 +32,7 @@ const generateAdditionalOffer = () => {
   };
 };
 export const generateTripPointData = (length) => {
-  let result = [];
+  const result = [];
   for (let i = 0; i < length; i++) {
     result.push({
       point: generateDestination(),

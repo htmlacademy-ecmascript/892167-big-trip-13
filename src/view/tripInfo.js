@@ -1,8 +1,8 @@
 export const tripInfoTemplate = (data) => {
-  let totalPrice = 0;
-  Object.keys(data).map((key) => {
-    totalPrice += data[key].price;
-  });
+
+  const totalPrice = data.reduce((total, value) => {
+    return total + value.price;
+  }, 0);
   return `<section class="trip-main__trip-info  trip-info">
             <div class="trip-info__main">
               <h1 class="trip-info__title">Amsterdam &mdash; Chamonix &mdash; Geneva</h1>
