@@ -152,7 +152,7 @@ const generateDescription = () => {
 };
 
 const generateImage = (length) => {
-  let images = [];
+  const images = [];
   for (let i = 0; i < length; i++) {
     const randomNumber = Math.trunc(Math.random() * 1000);
     images.push(`http://picsum.photos/248/152?r=${randomNumber}`);
@@ -172,7 +172,7 @@ const generateAdditionalOffer = () => {
   };
 };
 const generateTripPointData = (length) => {
-  let result = [];
+  const result = [];
   for (let i = 0; i < length; i++) {
     result.push({
       point: generateDestination(),
@@ -526,10 +526,10 @@ const sortTemplate = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tripInfoTemplate", function() { return tripInfoTemplate; });
 const tripInfoTemplate = (data) => {
-  let totalPrice = 0;
-  Object.keys(data).map((key) => {
-    totalPrice += data[key].price;
-  });
+
+  const totalPrice = data.reduce((total, value) => {
+    return total + value.price;
+  }, 0);
   return `<section class="trip-main__trip-info  trip-info">
             <div class="trip-info__main">
               <h1 class="trip-info__title">Amsterdam &mdash; Chamonix &mdash; Geneva</h1>
